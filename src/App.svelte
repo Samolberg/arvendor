@@ -1,31 +1,33 @@
 <script>
     import Navbar from './Navbar.svelte';
-    const items = [
+    import Landing from './Landing.svelte';
+    import Content from './Content.svelte';
+    
+    const navItems = [
         {
             link: "/",
-            name: "Root"
+            name: "Firmast"
         },
         {
             link: "/",
-            name: "Other stuff"
+            name: "Teenused"
         },
         {
             link: "/",
-            name: "More stuff"
+            name: "Hinnakiri"
         },
+        {
+            link: "/",
+            name: "Kontakt"
+        }
     ]
+
 </script>
 
-<Navbar {items}/>
-<body>
-    {#each { length: 100 } as _, _}
-    <h1>Hello world!<br/></h1>
-    {/each}
-</body>
 
-<style>
-  body {
-    padding: 5%;
-    padding-top: 60px;
-  }
-</style>
+<Navbar {navItems}/>
+<Landing/>
+<Content/>
+   
+
+

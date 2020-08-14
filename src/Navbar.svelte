@@ -1,5 +1,5 @@
 <script>
-    export let items = [];
+    export let navItems = [];
 </script>
 
 <header class="navbar-header">
@@ -9,7 +9,7 @@
         </div>
         <nav class="navbar-items">
             <ul>
-                {#each items as item}
+                {#each navItems as item}
                     <li>
                         <a href={item.link}>{item.name}</a>
                     </li>
@@ -29,6 +29,7 @@
     width: 100%;
     z-index: 1000;
     top: 0;
+    left: 0;
     display: block;
     
     background: #eee;
